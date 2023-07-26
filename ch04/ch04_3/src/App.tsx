@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import NumberState from './pages/NumberState'
+import InputTest from './pages/InputTest'
+import ShowHideModal from './pages/ShowHideModal'
+import RadioInputTest from './pages/RadioInputTest'
+import HigherOrderRadioInputTest from './pages/HigherOrderRadioInputTest'
+import BasicForm from './pages/BasicForm'
+import ObjectState from './pages/ObjectState'
+import ArrayState from './pages/ArrayState'
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main>
+      <ArrayState />
+      <ObjectState />
+      <BasicForm />
+      <HigherOrderRadioInputTest />
+      <RadioInputTest />
+      <ShowHideModal />
+      <InputTest />
+      <NumberState />
+    </main>
+  )
 }
-
-export default App;
