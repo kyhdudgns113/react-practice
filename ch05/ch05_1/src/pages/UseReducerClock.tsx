@@ -1,11 +1,10 @@
 import {useReducer} from 'react'
-import {useSelector, useDispatch} from 'react-redux'
 import type {AppState} from '../store'
+import type {SetTodayAction} from '../store/actions'
 import {Div, Title, Subtitle} from '../components'
 import {useInterval} from '../hooks'
-import {SetTodayAction} from '../store/actions'
 
-export default function ReduxClock() {
+export default function UseReducerClock() {
   const [{today}, dispatch] = useReducer(
     (state: AppState, action: SetTodayAction) => {
       switch (action.type) {
@@ -23,7 +22,7 @@ export default function ReduxClock() {
   })
 
   return (
-    <Div className="flex flex-col items-center justify-center mt-16">
+    <Div className="flex flex-col items-center justify-center h-24">
       <Title className="text-5xl">UseReducerClock</Title>
       <Title className="mt-4 text-3xl">{today.toLocaleTimeString()}</Title>
       <Subtitle className="mt-4 text-2xl">{today.toLocaleDateString()}</Subtitle>
